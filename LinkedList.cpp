@@ -5,28 +5,56 @@ struct Node
 {
 
     int val;
+    int count;
     Node *next;
 
     Node(int x)
     {
         val = x;
+        count = 1;
         next = NULL;
+    }
+
+    void add(int val)
+    {
+        count += 1;
     }
 };
 
-struct LinkedList
+class LinkedList
 {
 
-  private:
-    Node *head; //start of the list
+private:
     Node *tail; //end of the list
-  public:
+    Node *head; //start of the list
+
+public:
     LinkedList()
     {
         head = NULL;
         tail = NULL;
     }
 
+    Node *getHead()
+    {
+        return head;
+    }
+    int maxCount(int maxCount) //get Node val with max count
+    {
+        Node *curr = head;      //dont use actual root
+        int maxVal = curr->val; //init
+        curr = curr->next;
+        while (curr) //while values in list
+        {
+            if (curr->count > maxCount) //update max val if maxCount found
+            {
+                maxCount = curr->count;
+                maxVal = curr->val;
+            }
+            curr = curr->next; //keep going
+        }
+        return maxVal;
+    }
     void print()
     {
         Node *curr = head;
@@ -47,6 +75,7 @@ struct LinkedList
             tail = head;
         }
     }
+
     //insert value in the front
     void insertFront(int val)
     {
@@ -153,26 +182,26 @@ struct LinkedList
     //end of LinkedList
 };
 
-int main()
-{
+// int main()
+// {
 
-    //try it
-    LinkedList list;
-    list.insert(20);
-    list.print();
-    /*methods
-    print()
+//     //try it
+//     LinkedList list;
+//     list.insert(20);
+//     list.print();
+//     /*methods
+//     print()
 
-    lookup(int val)
+//     lookup(int val)
 
-    insertFront(int val)
-    insertBack(int val)
-    insertBewtween(int val)
+//     insertFront(int val)
+//     insertBack(int val)
+//     insertBewtween(int val)
 
-    removeFront(int val)
-    removeBack(int val)
-    removeBetween(int val)
-    remove(int val) 
-      uses all others depending on the location of int val
-  */
-}
+//     removeFront(int val)
+//     removeBack(int val)
+//     removeBetween(int val)
+//     remove(int val)
+//       uses all others depending on the location of int val
+//   */
+// }
