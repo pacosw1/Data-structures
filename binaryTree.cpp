@@ -1,104 +1,93 @@
 #include <iostream>
+using namespace std;
 class Node
 {
-public:
+private:
     Node *left;
     Node *right;
     int val;
 
-    Node(int value)
+public:
+    Node(int);
+    Node *getLeft()
     {
-        val = value;
-        left = NULL;
-        right = NULL;
+        return left;
+    }
+    int getVal()
+    {
+        return val;
+    }
+    Node *getRight()
+    {
+        return right;
+    }
+    void setRight(int val)
+    {
+        right = new Node(val);
+    }
+    void setLeft(int val)
+    {
+        left = new Node(val);
     }
 };
+
+Node::Node(int value)
+{
+    this->val = value;
+    this->left = nullptr;
+    this->right = nullptr;
+}
 
 class BinaryTree
 {
-public:
+private:
     Node *root;
+
+public:
+    Node *getRoot()
+    {
+        return root;
+    }
     BinaryTree()
     {
-        root = NULL;
+        root = nullptr;
     }
 
-    bool findNode(int val)
+    void insert(int val) //add node
     {
-        Node *left;
-        Node *right;
-        Node *curr = root;
-        while (curr->left || curr->right)
-        {
-            if (curr->left->val == val)
-                return 1;
-            else if (curr->right->val == val)
-                return 1;
-            else
-            {
-                if (curr->right)
-                    right = curr->right;
-                if (curr->left)
-                    left = curr->left;
-            }
-        }
-        return 0;
-    }
 
-    void printRoot()
-    {
         Node *curr = root;
-        Node *left;
-        Node *right;
-        while (curr->left || curr->right)
-        {
-            std::cout << "curr: " << curr->val;
-            if (curr->left)
-            {
-                std::cout << "left: " << curr->left->val;
-                left = curr->left;
-            }
-            if (curr->right)
-            {
-                std::cout << "right: " << curr->right->val;
-                right = curr->right;
-            }
-        }
+        insertR(root, val);
+
+        // //loop
+        // if (val > root->val) root = root->right;
     }
-    void addNode(int val)
+    void insertR(Node *curr, int val) //get Node
     {
         if (!root)
-        {
             root = new Node(val);
-            return;
-        }
-
-        Node *curr = root;
-        while (curr->left || curr->right)
+        else
         {
-            if (val < curr->val)
+            if (val < curr->getVal())
             {
-                if (curr->left)
-                    curr = curr->left;
-                else
-                    curr->left = new Node(val);
+                if (!curr->getLeft())
+                    return curr->setLeft(val);
+                insertR(curr->getLeft(), val);
             }
-            else if (val >= curr->val)
+            else
             {
-                if (curr->right)
-                    curr = curr->right;
-                else
-                    curr->right = new Node(val);
+                if (!curr->getRight())
+                    return curr->setRight(val);
+                insertR(curr->getRight(), val);
             }
         }
     }
-};
 
-int main()
-{
-    BinaryTree tree;
-    tree.addNode(1);
-    tree.addNode(2);
-    tree.printRoot();
-    return 0;
-}
+    bool find(Node *curr) //find node
+    {
+    }
+
+    void remove(Node *curr)
+    {
+    }
+};
