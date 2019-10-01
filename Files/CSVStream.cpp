@@ -9,6 +9,10 @@ public:
     string value;
     ifstream file;
 
+    string getRawVal()
+    {
+        return value;
+    }
     int getVal()
     {
         return stoi(value);

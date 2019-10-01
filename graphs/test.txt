@@ -1,0 +1,72 @@
+Aguascalientes
+Cd.MÈxico
+Chihuahua
+Culiacan
+Durango
+Guadalajara
+LeÛn
+MÈrida
+Monterrey
+Morelia
+Puebla
+QuerÈtaro
+Tijuana
+TorreÛn
+Veracruz
+#
+Chihuahua Aguascalientes 700
+Cd.MÈxico Aguascalientes 500
+Guadalajara Aguascalientes 300
+Monterrey Aguascalientes 500
+Puebla Aguascalientes 300
+Tijuana Aguascalientes 800
+Veracruz Aguascalientes 400
+Cd.MÈxico Chihuahua 1200
+Culiacan Chihuahua 800
+Guadalajara Chihuahua 1000
+Monterrey Chihuahua 700
+Tijuana Chihuahua 600
+Culiacan Cd.MÈxico 700
+Guadalajara Cd.MÈxico 800
+LeÛn Cd.MÈxico 500
+MÈrida Cd.MÈxico 900
+Monterrey Cd.MÈxico 800
+Morelia Cd.MÈxico 500
+Durango Cd.MÈxico 700
+Tijuana Cd.MÈxico 1100
+TorreÛn Cd.MÈxico 700
+Veracruz Cd.MÈxico 600
+Guadalajara Culiacan 400
+Monterrey Culiacan 600
+Tijuana Culiacan 800
+LeÛn Guadalajara 500
+MÈrida Guadalajara 1100
+Monterrey Guadalajara 800
+Puebla Guadalajara 700
+Durango Guadalajara 500
+Tijuana Guadalajara 850
+TorreÛn Guadalajara 500
+Veracruz Guadalajara 900
+MÈrida LeÛn 700
+Monterrey LeÛn 700
+Tijuana LeÛn 900
+Monterrey MÈrida 1000
+Morelia MÈrida 900
+Puebla MÈrida 900
+QuerÈtaro MÈrida 900
+Tijuana MÈrida 1300
+Veracruz MÈrida 800
+Morelia Monterrey 700
+Puebla Monterrey 700
+QuerÈtaro Monterrey 800
+Durango Monterrey 600
+Tijuana Monterrey 1000
+Veracruz Monterrey 800
+Tijuana Morelia 800
+Tijuana Puebla 1200
+Tijuana QuerÈtaro 900
+Veracruz QuerÈtaro 600
+TorreÛn Durango 800
+Veracruz Durango 600
+TorreÛn Tijuana 900
+Veracruz Tijuana 1300

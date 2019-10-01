@@ -85,6 +85,7 @@ public:
 
     bool find(Node *curr) //find node
     {
+        return true;
     }
 
     void remove(Node *curr)
